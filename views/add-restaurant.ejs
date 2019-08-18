@@ -1,0 +1,66 @@
+<% include partials/header.ejs %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-restaurant-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    Restaurant name
+                </div>
+                <div class="form-group col-md-10">
+                    <input type="text" class="form-control" name="res_name" id="res-name" placeholder="Res Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                        Short Name
+                </div>
+                <div class="form-group col-md-10">
+                    <input type="text" class="form-control" name="short_name" id="short_name" placeholder="short_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                        Location
+                </div>
+                <div class="form-group col-md-10">
+                    <input type="text" class="form-control" name="location" id="location" placeholder="location" require>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                        Waktu Buka
+                </div>
+                <div class="form-group col-md-10">
+                    <input type="waktu_buka" class="form-control" name="waktu_buka" id="waktu_buka" placeholder="waktu_buka" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                        Warteg Type
+                </div>
+                <div class="form-group col-md-10">
+                    <select id="type" name="type" class="form-control" required>
+                        <option selected disabled>Choose type</option>
+                        <option>Restaurant</option>
+                        <option>Warteg</option>
+                        <option>Rumah makan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-11">
+                    <label for="restaurant-img"><b>Restaurant Image</b></label><br>
+                    <input type="file" name="image" id="player-img" class="" required>
+                </div>
+                <div class="form-group col-md-1">
+                    <br>
+                    <button type="submit" class="btn btn-primary float-right">Add Restaurant</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
